@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Espoir号</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <p id="tobaku">〜カイジ 名言集〜</p>
+            <p id="charactor"></p>
+            <p id="quote-text"></p>
+        </div>
+        <button id="start-btn"></button>
+    </div>
+
+
+    <script>
+        const messages = [
+            { charactor: "「勝たなきゃダメなんだ.....！」", quote: "利根川幸雄" }, // 0番目の要素
+            { charactor: "「耐えることなくして勝利はないんだっ…！」", quote: "カイジ" }, // 1番目の要素
+            { charactor: "「勇気を出せ…！二度三度なんていわねぇ…ここ一度だけ…勇気を…生き残るための勇気…」", quote: "カイジ" }, // 2番目の要素
+            { charactor: "「自分を救うのは...自分だけっ...！」", quote: "カイジ" }, // 3番目の要素
+            { charactor: "すべての大人たちに厳しい現実を突きつける「大人は質問に答えたりしない、それが基本だ」", quote: "利根川幸雄" },  // 4番目の要素
+            { charactor: "踏み出す勇気のないものを突き放す言葉「一生迷ってろ…！そして失い続けるんだ…貴重な機会(チャンス)をっ！」", quote: "利根川幸雄" },  // 5番目の要素
+            { charactor: "「金なんてゴミだっ!!」", quote: "マリオ" },  // 6番目の要素
+            { charactor: "退くべきところは退くが兵(つわもの)だ…！", quote: "利根川幸雄" },  // 7番目の要素
+            { charactor: "「金はな……命より重いんだっ……！」", quote: "利根川幸雄" },  // 8番目の要素
+            { charactor: "「漕ぎ出せっ……！勝負の大海へっ……！」", quote: "カイジ" },  // 9番目の要素
+            { charactor: "「勝たなきゃ誰かの養分…」", quote: "カイジ" },  // 10番目の要素
+        ];
+
+        // 名言スタートボタンを押下
+        $("#start-btn").on("click", function () {
+            // 乱数（0~10）
+            const messageNo = Math.floor(Math.random() * messages.length);
+            console.log(messages[messageNo]);
+
+            // 分岐処理
+            let charactor = document.getElementById("charactor");
+            let quote = document.getElementById("quote-text");
+            if (messageNo == 0) {
+                charactor.textContent = messages[messageNo].charactor;
+                quote.textContent = messages[messageNo].quote;
+            }
+            // 以下同様に条件分岐を追加する
+            if (messageNo == 1) {
+                charactor.textContent = messages[messageNo].charactor;
+                quote.textContent = messages[messageNo].quote;
+            }
+            if (messageNo == 2) {
+                charactor.textContent = messages[messageNo].charactor;
+                quote.textContent = messages[messageNo].quote;
+            }
+            if (messageNo == 3) {
+                charactor.textContent = messages[messageNo].charactor;
+                quote.textContent = messages[messageNo].quote;
+            }
+            if (messageNo == 4) {
+                charactor.textContent = messages[messageNo].charactor;
+                quote.textContent = messages[messageNo].quote;
+            }
+            if (messageNo == 5) {
+                charactor.textContent = messages[messageNo].charactor;
+                quote.textContent = messages[messageNo].quote;
+            }
+            if (messageNo == 6) {
+                charactor.textContent = messages[messageNo].charactor;
+                quote.textContent = messages[messageNo].quote;
+            }
+            if (messageNo == 7) {
+                charactor.textContent = messages[messageNo].charactor;
+                quote.textContent = messages[messageNo].quote;
+            }
+            if (messageNo == 8) {
+                charactor.textContent = messages[messageNo].charactor;
+                quote.textContent = messages[messageNo].quote;
+            }
+            if (messageNo == 9) {
+                charactor.textContent = messages[messageNo].charactor;
+                quote.textContent = messages[messageNo].quote;
+            }
+            if (messageNo == 10) {
+                charactor.textContent = messages[messageNo].charactor;
+                quote.textContent = messages[messageNo].quote;
+            }
+        });
+    </script>
+</body>
+
+</html>

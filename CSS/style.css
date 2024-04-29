@@ -1,0 +1,112 @@
+@media screen and (max-width: 499px) {
+
+    /*　画面サイズ 499pxまで適用　*/
+
+    .wrapper {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+        background-attachment: fixed;
+        background-image: url(../images/espoirgou.png);
+        background-color: black;
+        background-size: cover;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: center;
+        /*ブラーでぼやけた部分を非表示*/
+    }
+
+    /* :beforeにぼかし効果を設定する */
+    .wrapper:before {
+        content: "";
+        background: inherit;
+        /*containerで設定した背景を継承する*/
+        -webkit-filter: blur(5px);
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+        position: absolute;
+        /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        z-index: -1;
+        /*重なり順序を一番下にしておく*/
+    }
+
+    #tobaku {
+        width: auto;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(3, 3, 3, 0.5);
+        padding: 2%;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #quote {
+        font-size: 40px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(3, 3, 3, 0.5);
+        padding: 2%;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    #charactor {
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(3, 3, 3, 0.5);
+        padding: 1%;
+        margin-top: 5px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    #quote-text {
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(3, 3, 3, 0.5);
+        padding: 1%;
+        margin-top: 5px;
+        margin-left: auto;
+        border-radius: 15px;
+        text-align: right;
+    }
+
+    #start-btn {
+        height: 100px;
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+        background-color: dimgray;
+        background-image: url(../images/start_btn.jpg);
+        background-size: cover;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: contain;
+    }
+}/* media Query End */
